@@ -1,0 +1,76 @@
+.background-container {
+    display: flex;
+    width: 1440px;
+    height: 728px;
+    background-color: #F8F8F8;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+.text-container {
+    flex: 1; /* Занимает все доступное пространство по горизонтали */
+}
+
+.watch {
+    margin: 0;
+    font-family: "League Spartan", sans-serif;
+    color: #272727;
+    font-size: 250px;
+    font-weight: 300;
+    line-height: 230px;
+    margin-left: 135px;
+}
+
+.text {
+    margin: 0;
+    font-family: "League Spartan", sans-serif;
+    color: #161515;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 49.6px;
+    width: 575px;
+    margin-left: 135px;
+}
+
+.img {
+    width: 700px;
+    height: auto;
+
+}
+
+.btn-price {
+    display: flex;
+    align-items: center; /* Центрируем элементы внутри блока .btn-price по вертикали */
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 27px 80px;
+    font-size: 24px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    background-color: #161515;
+    color: #FFFFFF;
+    border: 0.5px solid #161515;
+    cursor: pointer;
+    transition: background-color 0.6s, color 0.6s;
+    margin-left: 135px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #F8F8F8;
+    color: #161515;
+    font-weight: 300;
+    border: 0.5px solid #161515;
+}
+
+.price {
+    font-size: 24px;
+    font-family: "League Spartan", sans-serif;
+    background-color: #FFFFFF;
+    padding: 27px 35px;
+    font-weight: 300;
+    border: 0.5px solid white;
+}
