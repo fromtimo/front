@@ -1,53 +1,58 @@
+/* Общие стили для всех устройств */
 .background-container {
     display: flex;
-    width: 1440px;
-    height: 728px;
+    width: 100%;
+    height: auto;
     background-color: #F8F8F8;
     padding: 20px;
     box-sizing: border-box;
-    align-items: center; /* Центрируем элементы по вертикали */
+    flex-direction: column;
+    align-items: center;
 }
 
 .text-container {
-    flex: 1; /* Занимает все доступное пространство по горизонтали */
+    flex: 1;
+    text-align: center;
 }
 
 .watch {
+    font-size: 150px;
     margin: 0;
     font-family: "League Spartan", sans-serif;
     color: #272727;
-    font-size: 250px;
     font-weight: 300;
-    line-height: 230px;
-    margin-left: 135px;
+    line-height: 1.2;
+    margin: 0 auto;
 }
 
 .text {
+    font-size: 24px;
     margin: 0;
     font-family: "League Spartan", sans-serif;
     color: #161515;
-    font-size: 32px;
     font-weight: 300;
-    line-height: 49.6px;
-    width: 575px;
-    margin-left: 135px;
+    line-height: 1.6;
+    width: 90%;
+    margin: 20px auto;
 }
 
 .img {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     height: auto;
-
+    margin-top: 20px;
 }
 
 .btn-price {
     display: flex;
-    align-items: center; /* Центрируем элементы внутри блока .btn-price по вертикали */
-    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .btn {
-    padding: 27px 80px;
-    font-size: 24px;
+    padding: 15px 30px;
+    font-size: 18px;
     font-family: "League Spartan", sans-serif;
     font-weight: 300;
     background-color: #161515;
@@ -55,7 +60,7 @@
     border: 0.5px solid #161515;
     cursor: pointer;
     transition: background-color 0.6s, color 0.6s;
-    margin-left: 135px;
+    margin: 10px 0;
     text-decoration: none;
 }
 
@@ -67,10 +72,79 @@
 }
 
 .price {
-    font-size: 24px;
+    font-size: 18px;
     font-family: "League Spartan", sans-serif;
     background-color: #FFFFFF;
-    padding: 27px 35px;
+    padding: 15px 30px;
     font-weight: 300;
     border: 0.5px solid white;
+    margin-top: 10px;
+}
+
+/* Медиа-запрос для экранов шире 600px (планшеты) */
+@media (min-width: 600px) {
+    .background-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .text-container {
+        flex: 1;
+        text-align: left;
+    }
+
+    .watch {
+        font-size: 200px;
+        margin-left: 50px;
+    }
+
+    .text {
+        font-size: 28px;
+        margin-left: 50px;
+        width: 70%;
+    }
+
+    .btn-price {
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .btn {
+        margin-left: 50px;
+    }
+
+    .price {
+        margin-left: 20px;
+    }
+}
+
+/* Медиа-запрос для экранов шире 1024px (десктопы) */
+@media (min-width: 1024px) {
+    .watch {
+        font-size: 250px;
+        margin-left: 135px;
+    }
+
+    .text {
+        font-size: 32px;
+        margin-left: 135px;
+        width: 575px;
+    }
+
+    .btn {
+        padding: 27px 80px;
+        font-size: 24px;
+        margin-left: 135px;
+    }
+
+    .price {
+        font-size: 24px;
+        padding: 27px 35px;
+    }
+
+    .img {
+        width: 700px;
+        margin-left: 20px;
+    }
 }
